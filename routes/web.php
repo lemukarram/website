@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\settingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/admin', function () {
-    return view('admin.index');
-});
+// Route::get('/admin', function () {
+//     return view('admin.index');
+// });
+
+Route::get('/admin', [settingController::class,'index']);
