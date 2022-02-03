@@ -22,3 +22,4 @@ Route::get('/', function () {
 // });
 
 Route::get('/admin', [settingController::class,'index']);
+Route::post('/setting_update', [settingController::class,'update']);
